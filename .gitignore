@@ -9,7 +9,7 @@ logs
 # Lock file
 package-lock.json
 # managed
-**.data.json
+#**.data.json
 **.node-persist**
 # end managed
 
