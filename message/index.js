@@ -14,37 +14,51 @@ module.exports = msgHandler = async (client =  new Client(), message) => {
         const q = args.join(' ')
 
         // validator
+        const prefix = /^[°•π÷×¶∆£¢€¥®™✓=|~!#$%^&./\\©^]/.test(command) ? command.match(/^[°•π÷×¶∆£¢€¥®™✓=|~!#$%^&./\\©^]/gi) : '-' 
         const isQuotedImage = quotedMsg && quotedMsg.type === 'image'
         const isQuotedVideo = quotedMsg && quotedMsg.type === 'video'
-        const isQuotedSticker = quotedMsg && quotedMsg.type === 'sticker'
         const isQuotedGif = quotedMsg && quotedMsg.mimetype === 'image/gif'
-        const isQuotedAudio = quotedMsg && quotedMsg.type === 'audio'
-        const isQuotedVoice = quotedMsg && quotedMsg.type === 'ptt'
         const isImage = type === 'image'
         const isVideo = type === 'video'
-        const isAudio = type === 'audio'
-        const isVoice = type === 'ptt'
         const isGif = mimetype === 'image/gif'
         const uaOverride = config.uaOverride
+
+        //util
+        const { weeaboo, fun} = require('../lib')
+        
+
+
+        
+        setTimeout(function() {
+            client.clearAllChats();
+            console.log(` seconds`)
+        },5000);
+
+        async function clearsemua() {
+            client.clearAllChats();
+        }
         
 
         switch (command) {
-            case 'holo': // Premium, chat VideFikri
-                await client.reply(from, 'Tes', id)
+            case 'Menu':
+            case 'menu':
+                await client.reply(from, 'stiker  \n sgif', id)
+                clearsemua();
             break
 
-            case 'azar': // Premium, chat VideFikri
+            case 'azar': 
                 await client.reply(from, 'Hai '+command, id)
+                clearsemua();
             break
 
             case 'stiker':
+            case 'sticker':
                 if (isMedia && isImage || isQuotedImage) {
                     await client.reply(from, "wait", id)
                     const encryptMedia = isQuotedImage ? quotedMsg : message
                     const mediaData = await decryptMedia(encryptMedia, uaOverride)
                     const _mimetype = isQuotedImage ? quotedMsg.mimetype : mimetype
                     const imageBase64 = `data:${_mimetype};base64,${mediaData.toString('base64')}`
-                    
                     await client.sendImageAsSticker(from, imageBase64, { author: "authorWm", pack: "packWm" })
                     console.log(`Sticker processed  seconds`)
                 } else {
@@ -52,6 +66,7 @@ module.exports = msgHandler = async (client =  new Client(), message) => {
                 }
             break
 
+            case 'sgif':
             case 'sgif':
                 if (isMedia && isVideo || isGif || isQuotedVideo || isQuotedGif) {
                     await client.reply(from, "wait", id)
@@ -71,6 +86,10 @@ module.exports = msgHandler = async (client =  new Client(), message) => {
                 } else {
                     await client.reply(from, "ind.wrongFormat()", id)
                 }
+                const allChats = await client.getAllChats()
+                for (let delChats of allChats) {
+                    await client.deleteChat(delChats.id)
+                }
             break
 
             case 'bc':
@@ -82,6 +101,34 @@ module.exports = msgHandler = async (client =  new Client(), message) => {
                 }
                 await client.reply(from, "ind.doneOwner()", id)
             break
+
+            case 'clearall':
+                // const allChats = await client.getAllChats()
+                for (let delChats of allChats) {
+                    await client.deleteChat(delChats.id)
+                }
+                
+            break
+            case 'cl':
+                
+                await client.clearAllChats()
+            break
+
+            case 'doge':
+                fun.doge()
+                    .then(async (body) => {
+                        const dogeg = body.split('\n')
+                        const dogegx = dogeg[Math.floor(Math.random() * dogeg.length)]
+                        await client.sendStickerfromUrl(from, dogegx, null, { author: "authorWm", pack: "packWm" })
+                    })
+                    .catch(async (err) => {
+                        console.error(err)
+                        await client.reply(from, 'Error!', id)
+                    })
+            break
+            
+
+
         }
 
     } catch (err){
