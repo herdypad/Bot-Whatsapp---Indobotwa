@@ -1,7 +1,7 @@
 # Modules directory
 node_modules
 # Session file
-*.data.json
+#*.data.json
 # Debug file
 logs
 # Local folder
