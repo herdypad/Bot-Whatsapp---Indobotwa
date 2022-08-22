@@ -28,18 +28,17 @@ module.exports = msgHandler = async (client =  new Client(), message) => {
         
 
 
-      
 
         switch (command) {
             case 'Menu':
             case 'menu':
                 await client.reply(from, 'stiker  \n sgif', id)
-       
+
             break
 
             case 'azar': 
                 await client.reply(from, 'Hai '+command, id)
-    
+
             break
 
             case 'stiker':
@@ -101,7 +100,6 @@ module.exports = msgHandler = async (client =  new Client(), message) => {
                 
             break
             case 'cl':
-                
                 await client.clearAllChats()
             break
 
