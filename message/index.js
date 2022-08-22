@@ -28,27 +28,17 @@ module.exports = msgHandler = async (client =  new Client(), message) => {
         
 
 
-        //untuk auto reload
-        // setTimeout(function() {
-        //     client.clearAllChats();
-        //     console.log(` seconds`)
-        // },5000);
-
-        // async function clearsemua() {
-        //     client.clearAllChats();
-        // }
-        
 
         switch (command) {
             case 'Menu':
             case 'menu':
                 await client.reply(from, 'stiker  \n sgif', id)
-                
+
             break
 
             case 'azar': 
                 await client.reply(from, 'Hai '+command, id)
-                
+
             break
 
             case 'stiker':
