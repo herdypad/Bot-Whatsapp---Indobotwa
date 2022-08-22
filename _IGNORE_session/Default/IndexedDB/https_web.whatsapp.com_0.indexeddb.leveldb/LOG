@@ -1,0 +1,37 @@
+2022/08/22-10:55:26.269 8ec Reusing MANIFEST D:\SourceCode\NodeJs\Belajar Node Js dengan Wa\Botwaku\_IGNORE_session\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2022/08/22-10:55:26.270 8ec Recovering log #18
+2022/08/22-10:55:26.460 8ec Reusing old log D:\SourceCode\NodeJs\Belajar Node Js dengan Wa\Botwaku\_IGNORE_session\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/000018.log 
+2022/08/22-10:55:40.831 256c Level-0 table #24: started
+2022/08/22-10:55:40.855 256c Level-0 table #24: 1149543 bytes OK
+2022/08/22-10:55:40.858 256c Delete type=0 #18
+2022/08/22-10:55:41.553 8ec Compacting 1@1 + 1@2 files
+2022/08/22-10:55:41.620 8ec Generated table #25@1: 27545 keys, 1350990 bytes
+2022/08/22-10:55:41.620 8ec Compacted 1@1 + 1@2 files => 1350990 bytes
+2022/08/22-10:55:41.621 8ec compacted to: files[ 0 0 1 0 0 0 0 ]
+2022/08/22-10:55:41.622 8ec Delete type=2 #21
+2022/08/22-10:55:41.622 8ec Delete type=2 #24
+2022/08/22-10:55:43.970 2e28 Level-0 table #27: started
+2022/08/22-10:55:43.997 2e28 Level-0 table #27: 1077881 bytes OK
+2022/08/22-10:55:43.998 2e28 Delete type=0 #23
+2022/08/22-10:55:44.002 2e28 Compacting 1@1 + 1@2 files
+2022/08/22-10:55:44.092 2e28 Generated table #28@1: 43839 keys, 1933965 bytes
+2022/08/22-10:55:44.092 2e28 Compacted 1@1 + 1@2 files => 1933965 bytes
+2022/08/22-10:55:44.093 2e28 compacted to: files[ 0 0 1 0 0 0 0 ]
+2022/08/22-10:55:44.093 2e28 Delete type=2 #25
+2022/08/22-10:55:44.093 2e28 Delete type=2 #27
+2022/08/22-10:55:45.190 8ec Level-0 table #30: started
+2022/08/22-10:55:45.220 8ec Level-0 table #30: 964115 bytes OK
+2022/08/22-10:55:45.221 8ec Delete type=0 #26
+2022/08/22-10:55:45.224 8ec Compacting 1@1 + 1@2 files
+2022/08/22-10:55:45.322 8ec Generated table #31@1: 42529 keys, 1793304 bytes
+2022/08/22-10:55:45.322 8ec Compacted 1@1 + 1@2 files => 1793304 bytes
+2022/08/22-10:55:45.323 8ec compacted to: files[ 0 0 1 0 0 0 0 ]
+2022/08/22-10:56:08.232 8ec Level-0 table #33: started
+2022/08/22-10:56:08.284 8ec Level-0 table #33: 1114838 bytes OK
+2022/08/22-10:56:08.287 8ec Delete type=2 #28
+2022/08/22-10:56:08.287 8ec Delete type=0 #29
+2022/08/22-10:56:08.287 8ec Delete type=2 #30
+2022/08/22-10:56:08.304 8ec Compacting 1@1 + 1@2 files
+2022/08/22-10:56:08.425 8ec Generated table #34@1: 43521 keys, 1921856 bytes
+2022/08/22-10:56:08.425 8ec Compacted 1@1 + 1@2 files => 1921856 bytes
+2022/08/22-10:56:08.425 8ec compacted to: files[ 0 0 1 0 0 0 0 ]

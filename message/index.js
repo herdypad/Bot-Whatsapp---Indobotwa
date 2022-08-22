@@ -28,27 +28,27 @@ module.exports = msgHandler = async (client =  new Client(), message) => {
         
 
 
-        
-        setTimeout(function() {
-            client.clearAllChats();
-            console.log(` seconds`)
-        },5000);
+        //untuk auto reload
+        // setTimeout(function() {
+        //     client.clearAllChats();
+        //     console.log(` seconds`)
+        // },5000);
 
-        async function clearsemua() {
-            client.clearAllChats();
-        }
+        // async function clearsemua() {
+        //     client.clearAllChats();
+        // }
         
 
         switch (command) {
             case 'Menu':
             case 'menu':
                 await client.reply(from, 'stiker  \n sgif', id)
-                clearsemua();
+                
             break
 
             case 'azar': 
                 await client.reply(from, 'Hai '+command, id)
-                clearsemua();
+                
             break
 
             case 'stiker':
@@ -110,7 +110,6 @@ module.exports = msgHandler = async (client =  new Client(), message) => {
                 
             break
             case 'cl':
-                
                 await client.clearAllChats()
             break
 
