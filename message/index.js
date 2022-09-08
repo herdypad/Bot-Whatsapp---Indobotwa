@@ -38,17 +38,16 @@ module.exports = msgHandler = async (client =  new Client(), message) => {
 
             break
 
-<<<<<<< HEAD
+
             case 'test': 
-=======
+
             case 'tes':
             case 'azar': 
->>>>>>> 71404962462475873279b24968bf0ce44643f815
                 await client.reply(from, 'Hai '+command, id)
 
             break
 
-            case '​​​​​​':
+            case '​​​​​​,':
             case 'stiicker':
                 if (isMedia && isImage || isQuotedImage) {
                     await client.reply(from, "wait", id)
@@ -56,19 +55,19 @@ module.exports = msgHandler = async (client =  new Client(), message) => {
                     const mediaData = await decryptMedia(encryptMedia, uaOverride)
                     const _mimetype = isQuotedImage ? quotedMsg.mimetype : mimetype
                     const imageBase64 = `data:${_mimetype};base64,${mediaData.toString('base64')}`
-<<<<<<< HEAD
+
                     await client.sendImageAsSticker(from, imageBase64, { author: "authorWm", pack: "packWm" })
                     // console.log(`Sticker processed  seconds`)
-=======
+
                     await client.sendImageAsSticker(from, imageBase64, { author: "No Bot Wa", pack: "085158870125" })
                     console.log(`Sticker processed  seconds`)
->>>>>>> 71404962462475873279b24968bf0ce44643f815
+
                 } else {
                     await client.reply(from, "gagal", id)
                 }
             break
 
-            case '​​​​':
+            case '​​​​.':
             case 'sgif':
                 if (isMedia && isVideo || isGif || isQuotedVideo || isQuotedGif) {
                     await client.reply(from, "wait", id)
