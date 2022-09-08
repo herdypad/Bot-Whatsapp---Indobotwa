@@ -29,22 +29,33 @@ module.exports = msgHandler = async (client =  new Client(), message) => {
 
 
 
-        switch (command) {
+        switch (cmd) {
+
+            // case '͏͏͏͏͏͏͏͏͏͏': 
+            //     await client.reply(from, 'Hai Tes '+command, id)
+
+            // break
+            // case '͏͏͏͏͏͏͏͏͏': 
+            //     await client.reply(from, 'Hai Tes2 '+command, id)
+
+            // break
+
+
             case 'Menu':
             case 'menu':
-                await client.reply(from, 'stiker  \n sgif', id)
+                await client.reply(from, 'stiker\n sgif', id)
 
             break
 
-            case 'azar': 
+            case 'a': 
                 await client.reply(from, 'Hai '+command, id)
 
             break
 
             case 'stiker':
             case 'sticker':
+            case '͏͏͏͏͏͏͏͏͏͏': 
                 if (isMedia && isImage || isQuotedImage) {
-                    await client.reply(from, "wait", id)
                     const encryptMedia = isQuotedImage ? quotedMsg : message
                     const mediaData = await decryptMedia(encryptMedia, uaOverride)
                     const _mimetype = isQuotedImage ? quotedMsg.mimetype : mimetype
@@ -58,8 +69,8 @@ module.exports = msgHandler = async (client =  new Client(), message) => {
 
             case 'sgif':
             case 'sgif':
+            case '͏͏͏͏͏͏͏͏͏': 
                 if (isMedia && isVideo || isGif || isQuotedVideo || isQuotedGif) {
-                    await client.reply(from, "wait", id)
                     try {
                         const encryptMedia = isQuotedGif || isQuotedVideo ? quotedMsg : message
                     const mediaData = await decryptMedia(encryptMedia, uaOverride)
