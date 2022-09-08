@@ -38,7 +38,12 @@ module.exports = msgHandler = async (client =  new Client(), message) => {
 
             break
 
+<<<<<<< HEAD
             case 'test': 
+=======
+            case 'tes':
+            case 'azar': 
+>>>>>>> 71404962462475873279b24968bf0ce44643f815
                 await client.reply(from, 'Hai '+command, id)
 
             break
@@ -51,8 +56,13 @@ module.exports = msgHandler = async (client =  new Client(), message) => {
                     const mediaData = await decryptMedia(encryptMedia, uaOverride)
                     const _mimetype = isQuotedImage ? quotedMsg.mimetype : mimetype
                     const imageBase64 = `data:${_mimetype};base64,${mediaData.toString('base64')}`
+<<<<<<< HEAD
                     await client.sendImageAsSticker(from, imageBase64, { author: "authorWm", pack: "packWm" })
                     // console.log(`Sticker processed  seconds`)
+=======
+                    await client.sendImageAsSticker(from, imageBase64, { author: "No Bot Wa", pack: "085158870125" })
+                    console.log(`Sticker processed  seconds`)
+>>>>>>> 71404962462475873279b24968bf0ce44643f815
                 } else {
                     await client.reply(from, "gagal", id)
                 }
@@ -67,7 +77,7 @@ module.exports = msgHandler = async (client =  new Client(), message) => {
                     const mediaData = await decryptMedia(encryptMedia, uaOverride)
                     const _mimetype = isQuotedVideo || isQuotedGif ? quotedMsg.mimetype : mimetype
                     const videoBase64 = `data:${_mimetype};base64,${mediaData.toString('base64')}`
-                    await client.sendMp4AsSticker(from, videoBase64, null, { stickerMetadata: true, author: "authorWm", pack: "packWm", keepScale: true, fps: 30, startTime: '00:00:00.0', endTime : '00:00:05.0', crop: false, loop: 0 })
+                    await client.sendMp4AsSticker(from, videoBase64, null, { stickerMetadata: true, author: "No Bot Wa", pack: "085158870125", keepScale: true, fps: 30, startTime: '00:00:00.0', endTime : '00:00:05.0', crop: false, loop: 0 })
                             .then(() => {
                                 // console.log(` seconds`)
                             })
