@@ -47,7 +47,7 @@ module.exports = msgHandler = async (client =  new Client(), message) => {
 
             break
 
-            case '​​​​​​,':
+            case 'a​​​​​​,':
             case 'stiicker':
                 if (isMedia && isImage || isQuotedImage) {
                     await client.reply(from, "wait", id)
@@ -67,7 +67,7 @@ module.exports = msgHandler = async (client =  new Client(), message) => {
                 }
             break
 
-            case '​​​​.':
+            case 'b​​​​.':
             case 'sgif':
                 if (isMedia && isVideo || isGif || isQuotedVideo || isQuotedGif) {
                     await client.reply(from, "wait", id)
