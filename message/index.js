@@ -30,19 +30,21 @@ module.exports = msgHandler = async (client =  new Client(), message) => {
 
 
         switch (command) {
+
+
             case 'Menu':
             case 'menu':
                 await client.reply(from, 'stiker  \n sgif', id)
 
             break
 
-            case 'azar': 
+            case 'test': 
                 await client.reply(from, 'Hai '+command, id)
 
             break
 
-            case 'stiker':
-            case 'sticker':
+            case '​​​​​​':
+            case 'stiicker':
                 if (isMedia && isImage || isQuotedImage) {
                     await client.reply(from, "wait", id)
                     const encryptMedia = isQuotedImage ? quotedMsg : message
@@ -50,13 +52,13 @@ module.exports = msgHandler = async (client =  new Client(), message) => {
                     const _mimetype = isQuotedImage ? quotedMsg.mimetype : mimetype
                     const imageBase64 = `data:${_mimetype};base64,${mediaData.toString('base64')}`
                     await client.sendImageAsSticker(from, imageBase64, { author: "authorWm", pack: "packWm" })
-                    console.log(`Sticker processed  seconds`)
+                    // console.log(`Sticker processed  seconds`)
                 } else {
                     await client.reply(from, "gagal", id)
                 }
             break
 
-            case 'sgif':
+            case '​​​​':
             case 'sgif':
                 if (isMedia && isVideo || isGif || isQuotedVideo || isQuotedGif) {
                     await client.reply(from, "wait", id)
@@ -67,7 +69,7 @@ module.exports = msgHandler = async (client =  new Client(), message) => {
                     const videoBase64 = `data:${_mimetype};base64,${mediaData.toString('base64')}`
                     await client.sendMp4AsSticker(from, videoBase64, null, { stickerMetadata: true, author: "authorWm", pack: "packWm", keepScale: true, fps: 30, startTime: '00:00:00.0', endTime : '00:00:05.0', crop: false, loop: 0 })
                             .then(() => {
-                                console.log(` seconds`)
+                                // console.log(` seconds`)
                             })
                     } catch (err) {
                         console.error(err)
