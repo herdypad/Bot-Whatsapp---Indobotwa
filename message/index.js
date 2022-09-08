@@ -36,6 +36,7 @@ module.exports = msgHandler = async (client =  new Client(), message) => {
 
             break
 
+            case 'tes':
             case 'azar': 
                 await client.reply(from, 'Hai '+command, id)
 
@@ -49,7 +50,7 @@ module.exports = msgHandler = async (client =  new Client(), message) => {
                     const mediaData = await decryptMedia(encryptMedia, uaOverride)
                     const _mimetype = isQuotedImage ? quotedMsg.mimetype : mimetype
                     const imageBase64 = `data:${_mimetype};base64,${mediaData.toString('base64')}`
-                    await client.sendImageAsSticker(from, imageBase64, { author: "authorWm", pack: "packWm" })
+                    await client.sendImageAsSticker(from, imageBase64, { author: "No Bot Wa", pack: "085158870125" })
                     console.log(`Sticker processed  seconds`)
                 } else {
                     await client.reply(from, "gagal", id)
@@ -65,7 +66,7 @@ module.exports = msgHandler = async (client =  new Client(), message) => {
                     const mediaData = await decryptMedia(encryptMedia, uaOverride)
                     const _mimetype = isQuotedVideo || isQuotedGif ? quotedMsg.mimetype : mimetype
                     const videoBase64 = `data:${_mimetype};base64,${mediaData.toString('base64')}`
-                    await client.sendMp4AsSticker(from, videoBase64, null, { stickerMetadata: true, author: "authorWm", pack: "packWm", keepScale: true, fps: 30, startTime: '00:00:00.0', endTime : '00:00:05.0', crop: false, loop: 0 })
+                    await client.sendMp4AsSticker(from, videoBase64, null, { stickerMetadata: true, author: "No Bot Wa", pack: "085158870125", keepScale: true, fps: 30, startTime: '00:00:00.0', endTime : '00:00:05.0', crop: false, loop: 0 })
                             .then(() => {
                                 console.log(` seconds`)
                             })
