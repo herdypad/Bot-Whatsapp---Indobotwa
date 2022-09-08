@@ -36,6 +36,7 @@ module.exports = msgHandler = async (client =  new Client(), message) => {
 
             break
 
+            case 'tes':
             case 'azar': 
                 await client.reply(from, 'Hai '+command, id)
 
