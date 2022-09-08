@@ -1,10 +1,10 @@
 # Node.js Modules
 node_modules
-**Session**
+# Session file
 # Lock file
 package-lock.json
 # managed
-**_IGNORE_**
+# **_IGNORE_**
 # end managed
 ##########
 
