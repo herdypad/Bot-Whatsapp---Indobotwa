@@ -43,7 +43,10 @@ module.exports = msgHandler = async (client =  new Client(), message) => {
 
             case 'Menu':
             case 'menu':
-                await client.reply(from, 'stiker  \n sgif', id)
+                case '#menu':
+                case '#Menu':
+                case '#help':
+                await client.reply(from, 'stiker\n sgif', id)
 
             break
 
