@@ -46,7 +46,7 @@ module.exports = msgHandler = async (client =  new Client(), message) => {
                 case '#menu':
                 case '#Menu':
                 case '#help':
-                await client.reply(from, 'stiker\n sgif', id)
+                await client.reply(from, 'Menu Hanya Bisa Di Aplikasi ini \nhttps://play.google.com/store/apps/details?id=com.indobot.botwastikerapp \n\nhanya 4mb', id)
 
             break
 
