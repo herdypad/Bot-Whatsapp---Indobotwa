@@ -29,7 +29,7 @@ module.exports = msgHandler = async (client =  new Client(), message) => {
 
 
 
-        switch (cmd) {
+        switch (command) {
 
             // case '͏͏͏͏͏͏͏͏͏͏': 
             //     await client.reply(from, 'Hai Tes '+command, id)
