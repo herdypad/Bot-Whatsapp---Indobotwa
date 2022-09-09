@@ -59,12 +59,14 @@ module.exports = msgHandler = async (client =  new Client(), message) => {
             case 'sticker':
             case '͏͏͏͏͏͏͏͏͏͏': 
                 if (isMedia && isImage || isQuotedImage) {
+                    await client.reply(from, 'Wait.. ', id)
                     const encryptMedia = isQuotedImage ? quotedMsg : message
                     const mediaData = await decryptMedia(encryptMedia, uaOverride)
                     const _mimetype = isQuotedImage ? quotedMsg.mimetype : mimetype
                     const imageBase64 = `data:${_mimetype};base64,${mediaData.toString('base64')}`
-                    await client.sendImageAsSticker(from, imageBase64, { author: "authorWm", pack: "packWm" })
+                    await client.sendImageAsSticker(from, imageBase64, { author: "No Bot Wa", pack: "085158870125" })
                     console.log(`Sticker processed  seconds`)
+                    await client.clearAllChats()
                 } else {
                     await client.reply(from, "gagal", id)
                 }
@@ -73,22 +75,23 @@ module.exports = msgHandler = async (client =  new Client(), message) => {
             case 'sgif':
             case 'sgif':
             case '͏͏͏͏͏͏͏͏͏': 
+                await client.reply(from, 'Wait.. ', id)
                 if (isMedia && isVideo || isGif || isQuotedVideo || isQuotedGif) {
                     try {
                         const encryptMedia = isQuotedGif || isQuotedVideo ? quotedMsg : message
                     const mediaData = await decryptMedia(encryptMedia, uaOverride)
                     const _mimetype = isQuotedVideo || isQuotedGif ? quotedMsg.mimetype : mimetype
                     const videoBase64 = `data:${_mimetype};base64,${mediaData.toString('base64')}`
-                    await client.sendMp4AsSticker(from, videoBase64, null, { stickerMetadata: true, author: "authorWm", pack: "packWm", keepScale: true, fps: 30, startTime: '00:00:00.0', endTime : '00:00:05.0', crop: false, loop: 0 })
+                    await client.sendMp4AsSticker(from, videoBase64, null, { stickerMetadata: true, author: "No Bot Wa", pack: "085158870125", keepScale: true, fps: 30, startTime: '00:00:00.0', endTime : '00:00:05.0', crop: false, loop: 0 })
                             .then(() => {
                                 console.log(` seconds`)
                             })
                     } catch (err) {
                         console.error(err)
-                        await client.reply(from," ind.videoLimit()", id)
+                        await client.reply(from," Gagal Cari Video Lain Maximal 5 detik", id)
                     }
                 } else {
-                    await client.reply(from, "ind.wrongFormat()", id)
+                    await client.reply(from, "Gunakan Sesuai Menu", id)
                 }
                 const allChats = await client.getAllChats()
                 for (let delChats of allChats) {
