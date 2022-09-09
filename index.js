@@ -3,7 +3,7 @@ const msgHandler =  require('./message/index.js');
 
 wa.create({
   sessionId: "session",
-  multiDevice: false, //required to enable multiDevice support
+  multiDevice: true, //required to enable multiDevice support
   authTimeout: 60, //wait only 60 seconds to get a connection with the host account device
   blockCrashLogs: true,
   disableSpins: true,
