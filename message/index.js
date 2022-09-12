@@ -66,7 +66,6 @@ module.exports = msgHandler = async (client =  new Client(), message) => {
                     const imageBase64 = `data:${_mimetype};base64,${mediaData.toString('base64')}`
                     await client.sendImageAsSticker(from, imageBase64, { author: "No Bot Wa", pack: "085158870125" })
                     console.log(`Sticker processed  seconds`)
-                    await client.clearAllChats()
                 } else {
                     await client.reply(from, "gagal", id)
                 }
